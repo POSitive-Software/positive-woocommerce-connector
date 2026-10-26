@@ -1,0 +1,44 @@
+{
+  "Urls": "http://localhost:5220",
+  "Connectors": {
+    "ConfigPath": "",
+    "DatabasePath": "",
+    "SecretsPath": "",
+    "TickSeconds": 5,
+    "MaxJobsPerTick": 25,
+    "PosApiBaseUrl": "http://localhost:5210",
+    "AllowPrivateStoreHosts": false,
+    "ForwardTokenPath": "",
+    "_about": "Loopback only: Urls must be localhost/127.0.0.1/[::1] or the host refuses to start; the internet reaches /hooks through the POSitive Anywhere server's forward (Positive:Connectors:HostUrl there). Empty paths = %ProgramData%\\POSitiveAnywhereV2\\connectors.json, ...\\connectors\\connectors.db, ...\\connectors\\secrets.json and ...\\connectors\\forward.token.",
+    "_aboutPosApiBaseUrl": "Where the connector calls POSitive Anywhere with its API key. Must be this machine (localhost/127.0.0.1/[::1]) or the host refuses to start.",
+    "_aboutAllowPrivateStoreHosts": "Dev only. false (default) = store addresses on loopback, link-local or private networks are refused (SSRF guard). true lets a dev store on localhost:8090 / host.docker.internal / the LAN be connected."
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft.AspNetCore": "Warning",
+        "System.Net.Http.HttpClient": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "pa-connectors-.log",
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 31,
+          "fileSizeLimitBytes": 10485760,
+          "rollOnFileSizeLimit": true
+        }
+      }
+    ]
+  }
+}

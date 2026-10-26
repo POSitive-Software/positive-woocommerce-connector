@@ -1,0 +1,206 @@
+{
+  "_fixture": "Partial refund (api_refund:false, restock_items:true) on the guest order. 'order' = GET /orders/{id} after the refund (status stays processing; refunds[] summary). 'refund' = GET /orders/{id}/refunds/{refundId}.",
+  "order": {
+    "id": 58,
+    "parent_id": 0,
+    "status": "processing",
+    "currency": "USD",
+    "version": "11.2.0",
+    "prices_include_tax": false,
+    "date_created": "2026-10-08T18:12:01",
+    "date_modified": "2026-10-08T18:12:21",
+    "discount_total": "0.00",
+    "discount_tax": "0.00",
+    "shipping_total": "0.00",
+    "shipping_tax": "0.00",
+    "cart_tax": "2.85",
+    "total": "34.85",
+    "total_tax": "2.85",
+    "customer_id": 0,
+    "order_key": "wc_order_JS2Z61HkPAtpX",
+    "billing": {
+      "first_name": "Gina",
+      "last_name": "Guest",
+      "company": "",
+      "address_1": "300 Guest Rd",
+      "address_2": "",
+      "city": "Spokane",
+      "state": "WA",
+      "postcode": "99203",
+      "country": "US",
+      "email": "Gina.Guest@Example.com",
+      "phone": "509-555-0199"
+    },
+    "shipping": {
+      "first_name": "Gina",
+      "last_name": "Guest",
+      "company": "",
+      "address_1": "300 Guest Rd",
+      "address_2": "",
+      "city": "Spokane",
+      "state": "WA",
+      "postcode": "99203",
+      "country": "US",
+      "phone": ""
+    },
+    "payment_method": "stripe",
+    "payment_method_title": "Credit card (Stripe)",
+    "transaction_id": "",
+    "customer_ip_address": "",
+    "customer_user_agent": "",
+    "created_via": "rest-api",
+    "customer_note": "Leave at the back door",
+    "date_completed": null,
+    "date_paid": "2026-10-08T18:12:01",
+    "cart_hash": "",
+    "number": "58",
+    "meta_data": [],
+    "line_items": [
+      {
+        "id": 1,
+        "name": "Cap",
+        "product_id": 16,
+        "variation_id": 0,
+        "quantity": 2,
+        "tax_class": "",
+        "subtotal": "32.00",
+        "subtotal_tax": "2.85",
+        "total": "32.00",
+        "total_tax": "2.85",
+        "taxes": [
+          {
+            "id": 1,
+            "total": "2.85",
+            "subtotal": "2.85"
+          }
+        ],
+        "meta_data": [
+          {
+            "id": 16,
+            "key": "_reduced_stock",
+            "value": "1",
+            "display_key": "_reduced_stock",
+            "display_value": "1"
+          },
+          {
+            "id": 74,
+            "key": "_restock_refunded_items",
+            "value": "1",
+            "display_key": "_restock_refunded_items",
+            "display_value": "1"
+          }
+        ],
+        "sku": "woo-cap",
+        "global_unique_id": "",
+        "price": 16,
+        "image": {
+          "id": "45",
+          "src": "https://localhost:8090/wp-content/uploads/2019/01/cap-2.jpg"
+        },
+        "parent_name": null
+      }
+    ],
+    "tax_lines": [
+      {
+        "id": 2,
+        "rate_code": "US-WA-WA TAX-1",
+        "rate_id": 1,
+        "label": "WA Tax",
+        "compound": false,
+        "tax_total": "2.85",
+        "shipping_tax_total": "0.00",
+        "rate_percent": 8.9,
+        "meta_data": []
+      }
+    ],
+    "shipping_lines": [],
+    "fee_lines": [],
+    "coupon_lines": [],
+    "refunds": [
+      {
+        "id": 60,
+        "reason": "One cap returned (spike)",
+        "total": "-17.42",
+        "total_tax": "-1.42"
+      }
+    ],
+    "payment_url": "https://localhost:8090/checkout/order-pay/58/?pay_for_order=true&key=wc_order_JS2Z61HkPAtpX",
+    "is_editable": false,
+    "needs_payment": false,
+    "needs_processing": true,
+    "date_created_gmt": "2026-10-08T18:12:01",
+    "date_modified_gmt": "2026-10-08T18:12:21",
+    "date_completed_gmt": null,
+    "date_paid_gmt": "2026-10-08T18:12:01",
+    "currency_symbol": "$"
+  },
+  "refund": {
+    "id": 60,
+    "date_created": "2026-10-08T18:12:21",
+    "date_created_gmt": "2026-10-08T18:12:21",
+    "amount": "17.42",
+    "reason": "One cap returned (spike)",
+    "refunded_by": 1,
+    "refunded_payment": false,
+    "meta_data": [
+      {
+        "id": 1079,
+        "key": "_refund_type",
+        "value": "partial"
+      }
+    ],
+    "line_items": [
+      {
+        "id": 9,
+        "name": "Cap",
+        "product_id": 16,
+        "variation_id": 0,
+        "quantity": -1,
+        "tax_class": "",
+        "subtotal": "-16.00",
+        "subtotal_tax": "-1.42",
+        "total": "-16.00",
+        "total_tax": "-1.42",
+        "taxes": [
+          {
+            "id": 1,
+            "total": "-1.42",
+            "subtotal": "-1.42"
+          }
+        ],
+        "meta_data": [
+          {
+            "id": 67,
+            "key": "_refunded_item_id",
+            "value": "1",
+            "display_key": "_refunded_item_id",
+            "display_value": "1"
+          }
+        ],
+        "sku": "woo-cap",
+        "global_unique_id": "",
+        "price": 16,
+        "image": {
+          "id": "45",
+          "src": "https://localhost:8090/wp-content/uploads/2019/01/cap-2.jpg"
+        },
+        "parent_name": null
+      }
+    ],
+    "shipping_lines": [],
+    "tax_lines": [
+      {
+        "id": 10,
+        "rate_code": "US-WA-WA TAX-1",
+        "rate_id": 1,
+        "label": "WA Tax",
+        "compound": false,
+        "tax_total": "-1.42",
+        "shipping_tax_total": "0.00",
+        "rate_percent": 8.9,
+        "meta_data": []
+      }
+    ],
+    "fee_lines": []
+  }
+}

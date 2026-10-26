@@ -1,0 +1,113 @@
+{
+  "id": 16,
+  "name": "Cap",
+  "slug": "cap",
+  "permalink": "https://localhost:8090/product/cap/",
+  "date_created": "2019-01-16T13:01:53",
+  "date_created_gmt": "2019-01-16T13:01:53",
+  "date_modified": "2026-10-08T18:12:21",
+  "date_modified_gmt": "2026-10-08T18:12:21",
+  "type": "simple",
+  "status": "publish",
+  "featured": true,
+  "catalog_visibility": "visible",
+  "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac...(trimmed)",
+  "short_description": "<p>This is a simple product.</p>\n",
+  "sku": "woo-cap",
+  "price": "16",
+  "regular_price": "18",
+  "sale_price": "16",
+  "date_on_sale_from": null,
+  "date_on_sale_from_gmt": null,
+  "date_on_sale_to": null,
+  "date_on_sale_to_gmt": null,
+  "on_sale": true,
+  "purchasable": true,
+  "total_sales": 2,
+  "virtual": false,
+  "downloadable": false,
+  "downloads": [],
+  "download_limit": 0,
+  "download_expiry": 0,
+  "external_url": "",
+  "button_text": "",
+  "tax_status": "taxable",
+  "tax_class": "",
+  "manage_stock": true,
+  "stock_quantity": 49,
+  "backorders": "no",
+  "backorders_allowed": false,
+  "backordered": false,
+  "low_stock_amount": null,
+  "sold_individually": false,
+  "weight": "0.6",
+  "dimensions": {
+    "length": "8",
+    "width": "6.5",
+    "height": "4"
+  },
+  "shipping_required": true,
+  "shipping_taxable": true,
+  "shipping_class": "",
+  "shipping_class_id": 0,
+  "reviews_allowed": true,
+  "average_rating": "0.00",
+  "rating_count": 0,
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "parent_id": 0,
+  "purchase_note": "",
+  "categories": [
+    {
+      "id": 25,
+      "name": "Accessories",
+      "slug": "accessories"
+    }
+  ],
+  "brands": [],
+  "tags": [],
+  "images": [
+    {
+      "id": 45,
+      "date_created": "2019-01-16T13:02:04",
+      "date_created_gmt": "2019-01-16T13:02:04",
+      "date_modified": "2019-01-16T13:02:04",
+      "date_modified_gmt": "2019-01-16T13:02:04",
+      "src": "https://localhost:8090/wp-content/uploads/2019/01/cap-2.jpg",
+      "name": "cap-2.jpg",
+      "alt": "",
+      "srcset": "https://localhost:8090/wp-content/uploads/2019/01/cap-2.jpg 801w, https://localhost:8090/wp-content/uploads/2019/01/cap-2-300x300.jpg 300w, https://localhost:8090/wp-content/uploads/2019/01/cap-2-150x150.jpg 150w, https://localhost:8090/wp-content/uploads/2019/01/cap-2-768x768.jpg 768w, https://localhost:8090/wp-content/uploads/2019/01/cap-2-600x600.jpg 600w, https://localhost:8090/wp-content/uploads/2019/01/cap-2-100x100.jpg 100w",
+      "sizes": "(max-width: 801px) 100vw, 801px",
+      "thumbnail": "https://localhost:8090/wp-content/uploads/2019/01/cap-2-300x300.jpg"
+    }
+  ],
+  "attributes": [
+    {
+      "id": 1,
+      "name": "color",
+      "slug": "pa_color",
+      "position": 0,
+      "visible": true,
+      "variation": false,
+      "options": [
+        "Yellow"
+      ]
+    }
+  ],
+  "default_attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "menu_order": 0,
+  "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>18.00</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;18.00.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>16.00</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;16.00.</span>",
+  "related_ids": [
+    15,
+    31,
+    14,
+    17
+  ],
+  "meta_data": [],
+  "stock_status": "instock",
+  "has_options": false,
+  "post_password": "",
+  "global_unique_id": ""
+}

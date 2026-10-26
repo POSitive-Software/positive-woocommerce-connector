@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Connector engine (docs/connectors/WOOCOMMERCE-CONNECTOR.md §0, §2): durable
+       job queue, cursors, exceptions, item/order maps (SQLite), the IConnector
+       adapter contract, and PosApiClient — the IPosGateway that talks to
+       POSitive ONLY over the public /api/v2. Deliberately does NOT reference
+       PA.Core: the connector is a separate add-on and must never reach the
+       POSitive database or PA.Core's writers. The few machine utilities it
+       needs (ProgramData paths, DPAPI secrets) live here. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="PA.Tests" />
+    <!-- The connector tests' project in the public, MIT-licensed source of the connector. -->
+    <InternalsVisibleTo Include="PA.Connectors.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

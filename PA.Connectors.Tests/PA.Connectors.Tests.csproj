@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Unit tests of the three connector projects. Everything runs in-process: fake WooCommerce
+       stores and a fake POSitive /api/v2 behind HttpMessageHandlers, temp SQLite files, recorded
+       WooCommerce responses under Fixtures/. No network, no database, no installed service. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="8.0.11" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PA.Connectors.Core\PA.Connectors.Core.csproj" />
+    <ProjectReference Include="..\PA.Connectors.WooCommerce\PA.Connectors.WooCommerce.csproj" />
+    <ProjectReference Include="..\PA.Connectors.Host\PA.Connectors.Host.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Recorded WooCommerce responses. Byte-exact (.gitattributes -text): the webhook body's
+         HMAC fixture breaks on any EOL rewrite. -->
+    <None Update="Fixtures\WooCommerce\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

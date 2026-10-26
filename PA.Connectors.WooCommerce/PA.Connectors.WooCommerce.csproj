@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- WooCommerce adapter: WooClient (wc/v3 over HttpClient), models, webhook
+       signature check. References the engine only (never PA.Core). -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="PA.Tests" />
+    <!-- The connector tests' project in the public, MIT-licensed source of the connector. -->
+    <InternalsVisibleTo Include="PA.Connectors.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PA.Connectors.Core\PA.Connectors.Core.csproj" />
+  </ItemGroup>
+
+</Project>

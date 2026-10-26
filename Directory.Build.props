@@ -1,0 +1,15 @@
+<Project>
+
+  <!-- Generated from POSitive's internal repository at release time. -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <Authors>POSitive Software Company</Authors>
+    <Product>POSitive Anywhere V2</Product>
+    <Copyright>Copyright (c) 2026 POSitive Software Company</Copyright>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,3 @@
+# Recorded WooCommerce responses are byte-exact: the webhook body fixture is
+# checked against a recorded HMAC-SHA256 signature, which any EOL conversion breaks.
+PA.Connectors.Tests/Fixtures/WooCommerce/** -text

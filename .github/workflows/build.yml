@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # Windows: the host is a Windows service and the secret store uses DPAPI.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet restore PA.Connectors.sln
+      - run: dotnet build PA.Connectors.sln -c Release --no-restore
+      - run: dotnet test PA.Connectors.sln -c Release --no-build --logger "console;verbosity=normal"
